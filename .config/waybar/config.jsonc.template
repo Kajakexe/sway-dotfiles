@@ -1,0 +1,175 @@
+{
+  "layer": "top",
+  "height": 20,
+  "spacing": 5,
+  "margin-top": 12,
+  "margin-left": 16,
+  "margin-right": 16,
+
+  "modules-left": [
+    "custom/rofi",
+    "sway/workspaces",
+    "sway/window",
+    "tray",
+    "sway/mode"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "disk",
+    "cpu",
+    "custom/cpu_temp",
+    "backlight",
+    "custom/memory",
+    "pulseaudio",
+    "battery"
+  ],
+
+  "custom/rofi": {
+    "format": "<span></span>",
+    "on-click": "rofi -show drun -theme sway.rasi",
+    "on-click-right": "rofi -modi \"custom:~/.config/rofi/app/custom-apps\" -theme sway -show custom",
+    "escape": true,
+    "tooltip": false
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "active-only": false,
+    "all-outputs": false,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "<span>I</span>",
+      "2": "<span>II</span>",
+      "3": "<span>III</span>",
+      "4": "<span>IV</span>",
+      "5": "<span>V</span>",
+      "6": "<span>VI</span>",
+      "7": "<span>VII</span>",
+      "8": "<span>VIII</span>",
+      "9": "<span>IX</span>"
+    }
+  },
+
+  "sway/window": {
+    "format": "<span color='${FG}' bgcolor='${BG}'> 󰣆 </span> {app_id}",
+    "separate-outputs": true,
+    "tooltip": false
+  },
+
+  "sway/mode": {
+    "format": " {}",
+    "max-length": 50
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+
+  "disk": {
+    "format": "<span color='${BG}' bgcolor='${RED}'>  </span> {free}",
+    "interval": 20
+  },
+
+  "cpu": {
+    "format": "<span color='${BG}' bgcolor='${YELLOW}'>  </span> {usage}%",
+    "tooltip": false,
+    "interval": 1
+  },
+
+  "custom/cpu_temp": {
+    "exec": "~/.config/waybar/scripts/waybarTemp.sh",
+    "return-type": "json",
+    "interval": 2,
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "backlight": {
+    "format": "<span color='${BG}' bgcolor='${BLUE}'> 󰞏 </span> {percent}%",
+    "tooltip": false,
+    "on-click-right": "~/.config/custom_scripts/wlsunset.sh"
+  },
+
+  "custom/memory": {
+    "exec": "~/.config/waybar/scripts/memory_usage.sh",
+    "interval": 2,
+    "return-type": "json",
+    "format": "<span color='${BG}' bgcolor='${CYAN}'>  </span> {}"
+  },
+
+  "pulseaudio": {
+    "format": "<span color='${BG}' bgcolor='${GREEN}'>  </span> {volume}%",
+    "format-muted": "<span color='${BG}' bgcolor='${RED}'>  </span> {volume}%",
+    "format-bluetooth": "<span color='${BG}' bgcolor='${GREEN}'> 󰂰 </span> {volume}%",
+    "format-bluetooth-muted": "<span color='${BG}' bgcolor='${RED}'> 󰂲 </span> {volume}%",
+    "format-source": "{volume}% ",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip": false,
+    "max-volume": 130
+  },
+
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+
+  "battery": {
+    "interval": 1,
+    "states": {
+      "good": 99,
+      "warning": 30,
+      "critical": 20
+    },
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "format": "<span color='${BG}' bgcolor='${ACC}'> {icon} </span> {capacity}%",
+    "format-critical": "<span color='${BG}' bgcolor='${RED}'> {icon} </span> {capacity}%!!",
+    "format-warning": "<span color='${BG}' bgcolor='${YELLOW}'> {icon} </span> {capacity}%",
+    "format-full": "<span color='${BG}' bgcolor='${ACC}'> {icon} </span> {capacity}%",
+    "format-charging": "<span color='${BG}' bgcolor='${ACC}'> 󰂅 </span> {capacity}%",
+    "format-charging-warning": "<span color='${BG}' bgcolor='${YELLOW}'> 󰢝 </span> {capacity}%",
+    "format-charging-critical": "<span color='${BG}' bgcolor='${RED}'> 󰢜 </span> {capacity}%",
+    "format-plugged": "<span color='${BG}' bgcolor='${ACC}'> 󰂅 </span> {capacity}%",
+    "format-alt": "<span color='${BG}' bgcolor='${ACC}'> 󱧥 </span> {time}",
+    "tooltip": false
+  },
+
+  "network": {
+    "interval": 2,
+    "format": "<span color='${BG}' bgcolor='${MAGENTA}'> 󱘖 </span> {bandwidthDownBits}",
+    "format-wifi": "<span color='${BG}' bgcolor='${MAGENTA}'> {icon} </span> {bandwidthDownBits}",
+    "format-ethernet": "<span color='${BG}' bgcolor='${MAGENTA}'> 󰈀 </span> {bandwidthDownBits}",
+    "format-icons": [
+      "󰤫",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "tooltip": false,
+    "states": {
+      "normal": 25
+    }
+  },
+
+  "clock": {
+    "format": "<span color='${BG}' bgcolor='${WHITE}'>  </span> {:%a %d | %H:%M}",
+    "tooltip": false,
+    "interval": 1
+  }
+}

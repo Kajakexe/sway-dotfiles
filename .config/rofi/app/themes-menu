@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+theme_dir="$HOME/.config/sway/theme-switch/colors"
+themes=("$theme_dir"/*.sh)
+
+if [ -z "$1" ]; then
+    for theme in "${themes[@]}"; do
+        theme_name=$(basename "$theme" .sh)
+        echo "$theme_name"
+    done
+else
+    # Execute the theme switch
+    $HOME/.config/sway/theme-switch/switch.sh "$1"
+    pkill rofi
+fi
+
+

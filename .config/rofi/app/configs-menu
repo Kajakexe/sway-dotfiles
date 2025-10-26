@@ -1,0 +1,4 @@
+echo -e "⚙️\tSway Config\talacritty -e nvim ~/.config/sway/config"
+echo -e "⚙️\tAlacritty Config\talacritty -e nvim ~/.config/alacritty/alacritty.toml"
+echo -e "⚙️\tRofi Config\talacritty -e nvim ~/.config/rofi/config.rasi"
+echo -e "⚙️\tThemes Script\talacritty -e nvim ~/.config/themes/switch-theme"

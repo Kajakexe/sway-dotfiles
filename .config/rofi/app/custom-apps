@@ -1,0 +1,59 @@
+
+check_airpods_connected() {
+    bluetoothctl info A4:F6:E6:72:1C:0C | grep -q "Connected: yes"
+}
+
+
+if [ -z "$1" ]; then
+    echo -e "Themes"
+    echo -e "Browser"
+    echo -e "File Manager"
+    echo -e "Music"
+    
+    if check_airpods_connected; then
+        echo -e "Disconnect AirPods"
+    else
+        echo -e "Connect AirPods"
+    fi
+    
+    echo -e "Logout"
+    echo -e "Shutdown"
+else
+    # Execute the selected command
+    case "$1" in
+        "Themes")
+            pkill rofi
+            rofi -modi "themes:$HOME/.config/rofi/app/themes-menu" -theme sway -show themes
+            ;;
+        "Browser")
+            pkill rofi
+            firefox
+            ;;
+        "File Manager")
+            pkill rofi
+            nemo
+            ;;
+        "Music")
+            pkill rofi
+            spotify
+            ;;
+        "Connect AirPods")
+            pkill rofi
+            bluetoothctl power on
+            bluetoothctl connect A4:F6:E6:72:1C:0C
+            ;;
+        "Disconnect AirPods")
+            pkill rofi
+            # Disconnect AirPods
+            bluetoothctl disconnect A4:F6:E6:72:1C:0C
+            ;;
+        "Logout")
+            pkill rofi
+            swaymsg exit
+            ;;
+        "Shutdown")
+            pkill rofi
+            systemctl poweroff
+            ;;
+    esac
+fi

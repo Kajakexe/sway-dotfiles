@@ -1,0 +1,12 @@
+# ~/.config/sway/colors.inc.template
+
+# ~/.config/themes/sway-colors.inc.template
+set $bg ${BG}
+set $fg ${FG}
+set $ac ${ACC}
+
+client.focused          $ac     $bg     $fg  $ac  $ac
+client.focused_inactive $bg     $bg     $fg  $bg  $bg
+client.unfocused        $bg     $bg     $fg  $bg  $bg
+client.urgent           $ac     $ac     $ac  $ac  $ac
+client.placeholder      $bg     $bg     $fg  $bg  $bg

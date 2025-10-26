@@ -1,0 +1,56 @@
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Imported colors (from envsubst) */
+    bg:          ${BG};
+    fg:          ${FG};
+    bg0:         ${BG};
+    bg1:         ${BG};
+    fg0:         ${FG0};
+    fg1:         ${FG1};
+    acc:         ${ACC};
+    black:       ${BLACK};
+    red:         ${RED};
+    green:       ${GREEN};
+    yellow:      ${YELLOW};
+    blue:        ${BLUE};
+    magenta:     ${MAGENTA};
+    cyan:        ${CYAN};
+    white:       ${WHITE};
+
+    /* Base theme colors */
+    background:                  @bg0;
+    background-color:            @background;
+    foreground:                  @fg;
+    border-color:                @white;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    /* Normal state */
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @acc;
+    selected-normal-foreground:  @fg0;
+
+    /* Active state */
+    active-background:           @yellow;
+    active-foreground:           @bg;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @yellow;
+    selected-active-foreground:  @active-foreground;
+
+    /* Urgent state */
+    urgent-background:           @red;
+    urgent-foreground:           @bg;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @red;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+@import "sway-common"

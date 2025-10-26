@@ -1,0 +1,214 @@
+* {
+	padding: 0;
+	min-height: 0;
+	margin: 0;
+	text-shadow: none;
+	transition: none;
+	box-shadow: none;
+	border: none;
+	border-radius: 0px;
+}
+
+window#waybar {
+	background-color: #1F1F20;
+	padding: 0px 5px;
+	font-family: SF Mono, IosevkaTerm Nerd Font Propo;
+	font-size: 14px;
+	font-weight: 500;
+	color: #1F1F20;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	margin: 5px 0px;
+	padding: 0 6px;
+}
+
+#window,
+#tray,
+#disk,
+#cpu,
+#custom-cpu_temp,
+#custom-cpu_temp.critical,
+#backlight,
+#custom-memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#network,
+#clock {
+	padding-right: 4px;
+	background-color: #1F1F20;
+}
+
+/* Icon styling for all modules */
+.window-icon,
+.disk-icon,
+.cpu-icon,
+.backlight-icon,
+.memory-icon,
+.pulseaudio-icon,
+.pulseaudio-muted-icon,
+.pulseaudio-bluetooth-icon,
+.pulseaudio-bluetooth-muted-icon,
+.battery-icon,
+.battery-critical-icon,
+.battery-warning-icon,
+.battery-full-icon,
+.battery-charging-icon,
+.battery-charging-warning-icon,
+.battery-charging-critical-icon,
+.battery-plugged-icon,
+.battery-alt-icon,
+.network-icon,
+.network-wifi-icon,
+.network-ethernet-icon,
+.clock-icon {
+	color: #1F1F20;
+}
+
+/* Specific background colors for each icon type */
+.window-icon { background-color: #BE617B; }
+.disk-icon { background-color: #C17086; }
+.cpu-icon { background-color: #C07A8D; }
+.backlight-icon { background-color: #BF8998; }
+.memory-icon { background-color: #BF8998; }
+.pulseaudio-icon { background-color: #BE939F; }
+.pulseaudio-muted-icon { background-color: #C17086; }
+.pulseaudio-bluetooth-icon { background-color: #BE939F; }
+.pulseaudio-bluetooth-muted-icon { background-color: #C17086; }
+.battery-icon { background-color: #724A55; }
+.battery-critical-icon { background-color: #C17086; }
+.battery-warning-icon { background-color: #C07A8D; }
+.battery-full-icon { background-color: #724A55; }
+.battery-charging-icon { background-color: #724A55; }
+.battery-charging-warning-icon { background-color: #C07A8D; }
+.battery-charging-critical-icon { background-color: #C17086; }
+.battery-plugged-icon { background-color: #724A55; }
+.battery-alt-icon { background-color: #724A55; }
+.network-icon { background-color: #BE617B; }
+.network-wifi-icon { background-color: #BE617B; }
+.network-ethernet-icon { background-color: #BE617B; }
+.clock-icon { background-color: #C8C8C8; }
+
+#custom-rofi {
+	color: #C8C8C8;
+	/* border: 3px solid #1F1F20; */
+	/* background: #C8C8C8; */
+	padding: 0 6px;
+}
+
+#workspaces button {
+	color: #C8C8C8;
+	min-width: 20px;
+	padding: 0 4px;
+	margin: 0 3px;
+	background-color: #1F1F20;
+}
+
+#workspaces button:hover {
+	color: #C8C8C8;
+	background: #161616;
+}
+
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+	color: #C8C8C8;
+	background: #161616;
+}
+
+#workspaces button.urgent {
+	color: #1F1F20;
+	background: #C17086;
+}
+
+#window {
+	color: #C8C8C8;
+}
+
+#tray {
+	padding: 0 6px;
+	background: #1F1F20;
+}
+
+#disk {
+	color: #C17086;
+	border: 3px solid #C17086;
+}
+
+#cpu {
+	color: #C07A8D;
+	border: 3px solid #C07A8D;
+}
+
+#custom-cpu_temp {
+	color: #C07A8D;
+	border: 3px solid #C07A8D;
+}
+
+#custom-cpu_temp.critical {
+	color: #C17086;
+	border: 3px solid #C17086;
+}
+
+#custom-cpu_temp.unknown {
+	color: #1F1F20;
+	border: 3px solid #1F1F20;
+}
+
+#backlight {
+	color: #BF8998;
+	border: 3px solid #BF8998;
+}
+
+#custom-memory {
+	color: #BF8998;
+	border: 3px solid #BF8998;
+}
+
+#pulseaudio {
+	color: #BE939F;
+	border: 3px solid #BE939F;
+}
+
+#pulseaudio.muted {
+	color: #C17086;
+	border: 3px solid #C17086;
+}
+
+#battery {
+	color: #724A55;
+	border: 3px solid #724A55;
+}
+
+#battery.critical {
+	color: #C17086;
+	border: 3px solid #C17086;
+}
+
+#battery.warning {
+	color: #C07A8D;
+	border: 3px solid #C07A8D;
+}
+
+#clock {
+	color: #C8C8C8;
+	border: 3px solid #C8C8C8;
+}
+
+#network {
+	color: #BE617B;
+	border: 3px solid #BE617B;
+}
+
+#mode,
+#submap {
+	border: 3px solid #BF8998;
+	background: #BE939F;
+	padding: 0 6px;
+}

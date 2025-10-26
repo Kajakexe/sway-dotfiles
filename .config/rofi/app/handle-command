@@ -1,0 +1,5 @@
+awdawd
+
+\trofi -show themes -modi themes:$HOME/.config/rofi/app/themes-menu"
+
+\trofi -show configs -modi configs:$HOME/.config/rofi/app/configs-menu"

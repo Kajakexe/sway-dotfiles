@@ -1,0 +1,56 @@
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Imported colors (from envsubst) */
+    bg:          #1F1F20;
+    fg:          #E8E8E8;
+    bg0:         #1F1F20;
+    bg1:         #1F1F20;
+    fg0:         #F0F0F0;
+    fg1:         #C8C8C8;
+    acc:         #724A55;
+    black:       #1F1F20;
+    red:         #C17086;
+    green:       #BE939F;
+    yellow:      #C07A8D;
+    blue:        #BF8998;
+    magenta:     #BE617B;
+    cyan:        #BF8998;
+    white:       #C8C8C8;
+
+    /* Base theme colors */
+    background:                  @bg0;
+    background-color:            @background;
+    foreground:                  @fg;
+    border-color:                @white;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    /* Normal state */
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @acc;
+    selected-normal-foreground:  @fg0;
+
+    /* Active state */
+    active-background:           @yellow;
+    active-foreground:           @bg;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @yellow;
+    selected-active-foreground:  @active-foreground;
+
+    /* Urgent state */
+    urgent-background:           @red;
+    urgent-foreground:           @bg;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @red;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+@import "sway-common"

@@ -1,0 +1,15 @@
+
+//@theme "/usr/share/rofi/themes/gruvbox-light.rasi"
+
+configuration {
+  font: "SFMono Nerd Font 12";
+  
+}
+
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+
+//@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+
+@theme "~/.config/rofi/themes/breeze.rasi"

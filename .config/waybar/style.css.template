@@ -1,0 +1,214 @@
+* {
+	padding: 0;
+	min-height: 0;
+	margin: 0;
+	text-shadow: none;
+	transition: none;
+	box-shadow: none;
+	border: none;
+	border-radius: 0px;
+}
+
+window#waybar {
+	background-color: ${BG};
+	padding: 0px 5px;
+	font-family: SF Mono, IosevkaTerm Nerd Font Propo;
+	font-size: 14px;
+	font-weight: 500;
+	color: ${BG};
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	margin: 5px 0px;
+	padding: 0 6px;
+}
+
+#window,
+#tray,
+#disk,
+#cpu,
+#custom-cpu_temp,
+#custom-cpu_temp.critical,
+#backlight,
+#custom-memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#network,
+#clock {
+	padding-right: 4px;
+	background-color: ${BG};
+}
+
+/* Icon styling for all modules */
+.window-icon,
+.disk-icon,
+.cpu-icon,
+.backlight-icon,
+.memory-icon,
+.pulseaudio-icon,
+.pulseaudio-muted-icon,
+.pulseaudio-bluetooth-icon,
+.pulseaudio-bluetooth-muted-icon,
+.battery-icon,
+.battery-critical-icon,
+.battery-warning-icon,
+.battery-full-icon,
+.battery-charging-icon,
+.battery-charging-warning-icon,
+.battery-charging-critical-icon,
+.battery-plugged-icon,
+.battery-alt-icon,
+.network-icon,
+.network-wifi-icon,
+.network-ethernet-icon,
+.clock-icon {
+	color: ${BG};
+}
+
+/* Specific background colors for each icon type */
+.window-icon { background-color: ${MAGENTA}; }
+.disk-icon { background-color: ${RED}; }
+.cpu-icon { background-color: ${YELLOW}; }
+.backlight-icon { background-color: ${BLUE}; }
+.memory-icon { background-color: ${CYAN}; }
+.pulseaudio-icon { background-color: ${GREEN}; }
+.pulseaudio-muted-icon { background-color: ${RED}; }
+.pulseaudio-bluetooth-icon { background-color: ${GREEN}; }
+.pulseaudio-bluetooth-muted-icon { background-color: ${RED}; }
+.battery-icon { background-color: ${ACC}; }
+.battery-critical-icon { background-color: ${RED}; }
+.battery-warning-icon { background-color: ${YELLOW}; }
+.battery-full-icon { background-color: ${ACC}; }
+.battery-charging-icon { background-color: ${ACC}; }
+.battery-charging-warning-icon { background-color: ${YELLOW}; }
+.battery-charging-critical-icon { background-color: ${RED}; }
+.battery-plugged-icon { background-color: ${ACC}; }
+.battery-alt-icon { background-color: ${ACC}; }
+.network-icon { background-color: ${MAGENTA}; }
+.network-wifi-icon { background-color: ${MAGENTA}; }
+.network-ethernet-icon { background-color: ${MAGENTA}; }
+.clock-icon { background-color: ${WHITE}; }
+
+#custom-rofi {
+	color: ${WHITE};
+	/* border: 3px solid ${BLACK}; */
+	/* background: ${WHITE}; */
+	padding: 0 6px;
+}
+
+#workspaces button {
+	color: ${WHITE};
+	min-width: 20px;
+	padding: 0 4px;
+	margin: 0 3px;
+	background-color: ${BG};
+}
+
+#workspaces button:hover {
+	color: ${WHITE};
+	background: ${BG0};
+}
+
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+	color: ${WHITE};
+	background: ${BG0};
+}
+
+#workspaces button.urgent {
+	color: ${BG};
+	background: ${RED};
+}
+
+#window {
+	color: ${WHITE};
+}
+
+#tray {
+	padding: 0 6px;
+	background: ${BLACK};
+}
+
+#disk {
+	color: ${RED};
+	border: 3px solid ${RED};
+}
+
+#cpu {
+	color: ${YELLOW};
+	border: 3px solid ${YELLOW};
+}
+
+#custom-cpu_temp {
+	color: ${YELLOW};
+	border: 3px solid ${YELLOW};
+}
+
+#custom-cpu_temp.critical {
+	color: ${RED};
+	border: 3px solid ${RED};
+}
+
+#custom-cpu_temp.unknown {
+	color: ${BLACK};
+	border: 3px solid ${BLACK};
+}
+
+#backlight {
+	color: ${BLUE};
+	border: 3px solid ${BLUE};
+}
+
+#custom-memory {
+	color: ${CYAN};
+	border: 3px solid ${CYAN};
+}
+
+#pulseaudio {
+	color: ${GREEN};
+	border: 3px solid ${GREEN};
+}
+
+#pulseaudio.muted {
+	color: ${RED};
+	border: 3px solid ${RED};
+}
+
+#battery {
+	color: ${ACC};
+	border: 3px solid ${ACC};
+}
+
+#battery.critical {
+	color: ${RED};
+	border: 3px solid ${RED};
+}
+
+#battery.warning {
+	color: ${YELLOW};
+	border: 3px solid ${YELLOW};
+}
+
+#clock {
+	color: ${WHITE};
+	border: 3px solid ${WHITE};
+}
+
+#network {
+	color: ${MAGENTA};
+	border: 3px solid ${MAGENTA};
+}
+
+#mode,
+#submap {
+	border: 3px solid ${CYAN};
+	background: ${GREEN};
+	padding: 0 6px;
+}

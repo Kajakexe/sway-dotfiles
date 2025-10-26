@@ -1,0 +1,6 @@
+import = [
+	"$HOME/.config/alacritty/alacritty.toml",
+]
+
+[window.padding]
+x = 40
