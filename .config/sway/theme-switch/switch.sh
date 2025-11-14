@@ -20,15 +20,15 @@ envsubst < "$HOME/.config/alacritty/alacritty.toml.template" \
 # Generate Sway colors include
 envsubst '$BG $FG $ACC'< "$HOME/.config/sway/colors.inc.template" \
   > "$HOME/.config/sway/colors.inc"
-  
+
 # Generate Rofi colors inculde
 envsubst < "$HOME/.config/rofi/themes/sway.rasi.template" \
   > "$HOME/.config/rofi/themes/sway.rasi"
-  
+
 # Generate Waybar colors include
 envsubst < "$HOME/.config/waybar/config.jsonc.template" \
   > "$HOME/.config/waybar/config.jsonc"
-  
+
 envsubst < "$HOME/.config/waybar/style.css.template" \
   > "$HOME/.config/waybar/style.css"
 
@@ -86,3 +86,5 @@ else
 fi
 
 pkill -f nemo || true
+#nohup nemo -q && nemo > /dev/null 2>&1 &
+#xprop -root -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT ""

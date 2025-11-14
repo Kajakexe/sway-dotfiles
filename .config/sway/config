@@ -23,10 +23,11 @@ set $term alacritty
 #
 # Example configuration:
 #
-output DP-1 mode 1920x1080 position 0,0
-output DP-2 mode 1920x1080 position 1920,0
+output DP-2 mode 1920x1080 position 0,0
+output DP-1 mode 1920x1080 position 1920,0 transform 90
 #output DP-2 mode 1920x1080 position  3840,0
-#output HDMI-A-1 mode 1920x1080 position  1920,0
+#output HDMI-A-2 mode 1920x1080 position  0,0
+#output HDMI-A-2 mirror DP-1
 
 gaps inner 15
 
@@ -44,7 +45,7 @@ seat seat0 xcursor_theme Bibata-Modern-Ice 20
 default_border pixel 3
 
 
-exec_always --no-startup-id ~/.config/themes/random-theme.sh
+exec_always --no-startup-id ~/.config/sway/theme-switch/random-theme.sh
 
 # Colors
 include ~/.config/sway/colors.inc
@@ -83,6 +84,13 @@ include ~/.config/sway/colors.inc
 #
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
+
+
+input "type:keyboard" {
+    xkb_layout "us"
+    xkb_options "ctrl:nocaps,altwin:swap_alt_win"
+}
+
 
 ### Key bindings
 #
@@ -139,15 +147,20 @@ include ~/.config/sway/colors.inc
 #
 # Workspaces:
 #
-	# Monitor 1 (e.g. DP-1)
-	workspace 1 output DP-1
-	workspace 2 output DP-1
-	workspace 3 output DP-1
+	# Monitor 1 (e.g. DP-2)
+	workspace 1 output DP-2
+	workspace 2 output DP-2
+	workspace 3 output DP-2
+        workspace 4 output DP-2
+        workspace 5 output DP-2
 
-	# Monitor 2 (e.g. DP-2)
-	workspace 4 output DP-2
-	workspace 5 output DP-2
-	workspace 6 output DP-2
+	# Monitor 2 (e.g. DP-1)
+	workspace 6 output DP-1
+	workspace 7 output DP-1
+	workspace 8 output DP-1
+	workspace 9 output DP-1
+
+	#workspace 10 output HDMI-A-2
 
     # Switch to workspace
     bindsym $mod+1 workspace number 1
@@ -159,7 +172,7 @@ include ~/.config/sway/colors.inc
     bindsym $mod+7 workspace number 7
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    #bindsym $mod+0 workspace number 10
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -170,7 +183,7 @@ include ~/.config/sway/colors.inc
     bindsym $mod+Shift+7 move container to workspace number 7
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+    #bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #

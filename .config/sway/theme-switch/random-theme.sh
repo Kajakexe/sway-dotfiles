@@ -7,9 +7,9 @@ if [ -f "$flag" ]; then
     exit 0
 fi
 
-THEMES_DIR="$HOME/.config/themes/colors"
+THEMES_DIR="$HOME/.config/sway/theme-switch/colors"
 theme=$(ls "$THEMES_DIR"/*.sh | shuf -n 1 | xargs -n1 basename | sed 's/\.sh$//')
 
-"$HOME/.config/themes/switch.sh" "$theme"
+"$HOME/.config/sway/theme-switch/switch.sh" "$theme"
 
 touch "$flag"

@@ -9,13 +9,14 @@ if [ -z "$1" ]; then
     echo -e "Browser"
     echo -e "File Manager"
     echo -e "Music"
-    
+
     if check_airpods_connected; then
         echo -e "Disconnect AirPods"
     else
         echo -e "Connect AirPods"
     fi
-    
+
+    echo -e "Connect Controller"
     echo -e "Logout"
     echo -e "Shutdown"
 else
@@ -46,6 +47,10 @@ else
             pkill rofi
             # Disconnect AirPods
             bluetoothctl disconnect A4:F6:E6:72:1C:0C
+            ;;
+         "Connect Controller")
+            pkill rofi
+            bluetoothctl connect E4:17:D8:C5:95:5E
             ;;
         "Logout")
             pkill rofi
