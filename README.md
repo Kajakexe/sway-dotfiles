@@ -1,4 +1,4 @@
-# My Sway dotfiles
+# Sway dotfiles
 
 ## Previews
 
